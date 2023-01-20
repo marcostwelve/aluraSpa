@@ -1,0 +1,35 @@
+@import '../abstract/variaveis';
+
+@mixin bg-cores($cores...) {
+    background: linear-gradient(to left, $cores);
+}
+
+footer {
+    text-align: center;
+    font-size: $tamanho-do-texto / 2;
+    border-top: 2px solid $cor-primaria;
+    margin-top: 1rem;
+    padding: 1.2rem;
+    @include bg-cores($cor-primaria, $cor-secundaria, $cor-terciaria);
+    i {
+        color: red;
+    }
+}
+
+
+/* CÓDIGO DECLARADO UTILIZANDO UM ARQUIVO COM EXTENSÃO .SASS */
+
+// import styles/abstract/_variaveis.scss
+
+// @mixin bg-cores($cores...)
+//     background: liner-gradient(to left, $cores)
+    
+// footer
+//     text-align: center
+//     font-size: $tamanho-do-texto / 2
+//     border-top: 2px solid $cor-primaria
+//     margin-top: 1rem
+//     padding: 1.2rem
+//     @include bgcores($cor-primaria, $cor-secundaria, $cor-terciaria)
+//     i
+//         color: red
